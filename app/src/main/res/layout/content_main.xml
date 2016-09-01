@@ -14,7 +14,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,49 +23,49 @@
             android:orientation="vertical">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="On s&apos;en bas les couilles court"
+                android:text="On s&apos;en bat les couilles court"
                 android:id="@+id/onSenBatLesCouillesCourt" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais oui c&apos;est clair"
-                android:id="@+id/Malou" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="J&apos;m&apos;en bas les couilles"
-                android:id="@+id/Makelele" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Boite a lambert"
-                android:id="@+id/lambert" />
-
-            <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="On s&apos;en bat les couilles long"
                 android:id="@+id/onSenBatLesCouillesLong" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mais oui c&apos;est clair"
+                android:id="@+id/Malou" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="J&apos;m&apos;en bas les couilles"
+                android:id="@+id/Makelele" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Boite a lambert"
+                android:id="@+id/lambert" />
+
+            <Button
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="film les pieds"
                 android:id="@+id/filmLesPieds" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pas le temps de niaser"
                 android:id="@+id/pasltps" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Oh Charlie !"
                 android:id="@+id/charlie" />
