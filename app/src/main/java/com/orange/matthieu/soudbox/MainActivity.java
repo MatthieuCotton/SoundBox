@@ -5,7 +5,6 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,15 +13,6 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public final static String TAG = MainActivity.class.getSimpleName();
-
-    private Button mBtnOnSenBatLesCouillesCourt;
-    private Button mBtnMalou;
-    private Button mBtnMakelele;
-    private Button mBtnlambert;
-    private Button mBtnOnSenBatLesCouillesLong;
-    private Button mBtnFilmLesPieds;
-    private Button mBtnPasltps;
-    private Button mButton8;
 
     private MediaPlayer mMediaPlayer;
 
@@ -69,22 +59,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.onSenBatLesCouillesCourt:
                 mMediaPlayer = MediaPlayer.create(this, R.raw.onsenbatcourt);
                 mMediaPlayer.start();
-                Log.d(TAG, "onClick: button1");
                 break;
             case R.id.Malou:
                 mMediaPlayer = MediaPlayer.create(this, R.raw.malou);
                 mMediaPlayer.start();
-                Log.d(TAG, "onClick: button2");
                 break;
             case R.id.Makelele:
                 mMediaPlayer = MediaPlayer.create(this, R.raw.makelele);
                 mMediaPlayer.start();
-                Log.d(TAG, "onClick: button3");
                 break;
             case R.id.lambert:
                 mMediaPlayer = MediaPlayer.create(this, R.raw.boitalambert);
                 mMediaPlayer.start();
-                Log.d(TAG, "onClick: button4");
                 break;
             case R.id.onSenBatLesCouillesLong:
                 mMediaPlayer = MediaPlayer.create(this, R.raw.on_sen_bat_les_couilles);
@@ -98,28 +84,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mMediaPlayer = MediaPlayer.create(this, R.raw.pasltpsniaser);
                 mMediaPlayer.start();
                 break;
+            case R.id.charlie:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.ohcharlie);
+                mMediaPlayer.start();
+                break;
 
         }
 
     }
 
     private void initBtn() {
-        mBtnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
-        mBtnMalou = (Button) findViewById(R.id.Malou);
-        mBtnMakelele = (Button) findViewById(R.id.Makelele);
-        mBtnlambert = (Button) findViewById(R.id.lambert);
-        mBtnOnSenBatLesCouillesLong = (Button) findViewById(R.id.onSenBatLesCouillesLong);
-        mBtnFilmLesPieds = (Button) findViewById(R.id.filmLesPieds);
-        mBtnPasltps = (Button) findViewById(R.id.pasltps);
 
+        Button btnOnSenBatLesCouillesCourt;
+        Button btnMalou;
+        Button btnMakelele;
+        Button btnlambert;
+        Button btnOnSenBatLesCouillesLong;
+        Button btnFilmLesPieds;
+        Button btnPasltps;
+        Button btnCharlie;
 
-        mBtnOnSenBatLesCouillesCourt.setOnClickListener(this);
-        mBtnMalou.setOnClickListener(this);
-        mBtnMakelele.setOnClickListener(this);
-        mBtnlambert.setOnClickListener(this);
-        mBtnOnSenBatLesCouillesLong.setOnClickListener(this);
-        mBtnFilmLesPieds.setOnClickListener(this);
-        mBtnPasltps.setOnClickListener(this);
+        btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
+        btnMalou = (Button) findViewById(R.id.Malou);
+        btnMakelele = (Button) findViewById(R.id.Makelele);
+        btnlambert = (Button) findViewById(R.id.lambert);
+        btnOnSenBatLesCouillesLong = (Button) findViewById(R.id.onSenBatLesCouillesLong);
+        btnFilmLesPieds = (Button) findViewById(R.id.filmLesPieds);
+        btnPasltps = (Button) findViewById(R.id.pasltps);
+        btnCharlie = (Button) findViewById(R.id.charlie);
+
+        btnOnSenBatLesCouillesCourt.setOnClickListener(this);
+        btnMalou.setOnClickListener(this);
+        btnMakelele.setOnClickListener(this);
+        btnlambert.setOnClickListener(this);
+        btnOnSenBatLesCouillesLong.setOnClickListener(this);
+        btnFilmLesPieds.setOnClickListener(this);
+        btnPasltps.setOnClickListener(this);
+        btnCharlie.setOnClickListener(this);
     }
 
 }
