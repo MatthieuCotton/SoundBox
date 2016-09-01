@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.orange.matthieu.soudbox.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On s&apos;en bas les couilles court"
+        android:id="@+id/onSenBatLesCouillesCourt"
+        android:layout_below="@+id/pasltps"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mais oui c&apos;est clair"
+        android:id="@+id/Malou"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="J&apos;m&apos;en bas les couilles"
+        android:id="@+id/Makelele"
+        android:layout_below="@+id/Malou"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boite a lambert"
+        android:id="@+id/lambert"
+        android:layout_below="@+id/Makelele"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On s&apos;en bat les couilles long"
+        android:id="@+id/onSenBatLesCouillesLong"
+        android:layout_below="@+id/onSenBatLesCouillesCourt"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="film les pieds"
+        android:id="@+id/filmLesPieds"
+        android:layout_below="@+id/lambert"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pas le temps de niaser"
+        android:id="@+id/pasltps"
+        android:layout_below="@+id/filmLesPieds"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
