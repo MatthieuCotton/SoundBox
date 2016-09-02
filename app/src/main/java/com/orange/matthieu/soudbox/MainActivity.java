@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onPause() {
         super.onPause();
-        if(mMediaPlayer.isPlaying()){
+        if(mMediaPlayer.isPlaying()||mMediaPlayer == null){
             mMediaPlayer.stop();
         }
     }
