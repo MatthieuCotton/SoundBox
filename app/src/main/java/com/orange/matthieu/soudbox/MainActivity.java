@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startMusic(R.raw.ohcharlie);
                 break;
             case R.id.memeDuPlastique:
-                startMusic(R.raw.memeduplastique);
+                startMusic(R.raw.meme_du_plastique);
                 break;
             case R.id.alerteGogole:
                 startMusic(R.raw.alerteaugogole);
