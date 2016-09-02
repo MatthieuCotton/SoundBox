@@ -25,26 +25,34 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/onSenBatLesCouillesCourt"
-                android:id="@+id/onSenBatLesCouillesCourt" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/onSenBatLesCouillesLong"
                 android:text="@string/onSenBatLesCouillesLong" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/malou"
-                android:id="@+id/Malou" />
+                android:text="@string/onSenBatLesCouillesCourt"
+                android:id="@+id/onSenBatLesCouillesCourt" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/jeMenBatsLesCouilles"
+                android:text="@string/jeMenBatsLesCouillesLong"
                 android:id="@+id/Makelele" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/jeMenBatsLesCouillesCourt"
+                android:id="@+id/makeleleCourt" />
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/malou"
+                android:id="@+id/Malou" />
 
             <Button
                 android:layout_width="match_parent"

@@ -1,17 +1,23 @@
 <resources>
     <string name="app_name">SoundBox</string>
     <string name="action_settings">Settings</string>
-    <string name="onSenBatLesCouillesCourt">On s\'en bat les couilles court</string>
     <string name="onSenBatLesCouillesLong">On s\'en bat les couilles long</string>
+    <string name="onSenBatLesCouillesCourt">On s\'en bat les couilles court</string>
+    <string name="jeMenBatsLesCouillesLong">J\'m\'en bats les couilles long</string>
+    <string name="jeMenBatsLesCouillesCourt">J\'m\'en bats les couilles court</string>
+    <string name="alerteGogole">Alerte au gogole !</string>
+    <string name="chaussures">Je veux des chaussures</string>
     <string name="malou">Mais oui c\'est clair</string>
-    <string name="jeMenBatsLesCouilles">J\'m\'en bats les couilles</string>
     <string name="lambert">Boîte à Lambert</string>
     <string name="filmLesPieds">Filme les pieds</string>
     <string name="pasLeTempsDeNiaiser">Pas le temps de niaiser</string>
     <string name="charlie">Oh Charlie !</string>
     <string name="plastique">Même du plastique</string>
+<<<<<<< HEAD
     <string name="alerteGogole">Alerte au gogole !</string>
     <string name="chaussures">Je veux des chaussures</string>
     <string name="ohPutain">Oh putain</string>
     <string name="feller">Elle est feller</string>
+=======
+>>>>>>> origin/master
 </resources>
