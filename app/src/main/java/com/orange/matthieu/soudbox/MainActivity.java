@@ -88,7 +88,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mMediaPlayer = MediaPlayer.create(this, R.raw.ohcharlie);
                 mMediaPlayer.start();
                 break;
-
+            case R.id.memeDuPlastique:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.memeduplastique);
+                mMediaPlayer.start();
         }
 
     }
@@ -103,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnFilmLesPieds;
         Button btnPasltps;
         Button btnCharlie;
+        Button btnPlastique;
 
         btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
         btnMalou = (Button) findViewById(R.id.Malou);
@@ -112,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFilmLesPieds = (Button) findViewById(R.id.filmLesPieds);
         btnPasltps = (Button) findViewById(R.id.pasltps);
         btnCharlie = (Button) findViewById(R.id.charlie);
+        btnPlastique = (Button) findViewById(R.id.memeDuPlastique);
 
         btnOnSenBatLesCouillesCourt.setOnClickListener(this);
         btnMalou.setOnClickListener(this);
@@ -121,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFilmLesPieds.setOnClickListener(this);
         btnPasltps.setOnClickListener(this);
         btnCharlie.setOnClickListener(this);
+        btnPlastique.setOnClickListener(this);
     }
 
 }
