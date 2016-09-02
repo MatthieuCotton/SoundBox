@@ -5,9 +5,11 @@
     <string name="onSenBatLesCouillesLong">On s\'en bat les couilles long</string>
     <string name="malou">Mais oui c\'est clair</string>
     <string name="jeMenBatsLesCouilles">J\'m\'en bats les couilles</string>
-    <string name="lambert">Boîte a lambert</string>
+    <string name="lambert">Boîte à Lambert</string>
     <string name="filmLesPieds">Filme les pieds</string>
     <string name="pasLeTempsDeNiaiser">Pas le temps de niaiser</string>
     <string name="charlie">Oh Charlie !</string>
-    <string name="plastique">Meme du plastique</string>
+    <string name="plastique">Même du plastique</string>
+    <string name="alerteGogole">Alerte au gogole !</string>
+    <string name="chaussures">Je veux des chaussures</string>
 </resources>

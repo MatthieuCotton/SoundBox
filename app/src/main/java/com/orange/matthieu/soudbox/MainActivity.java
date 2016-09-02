@@ -3,6 +3,7 @@ package com.orange.matthieu.soudbox;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -91,6 +92,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.memeDuPlastique:
                 mMediaPlayer = MediaPlayer.create(this, R.raw.memeduplastique);
                 mMediaPlayer.start();
+                break;
+            case R.id.alerteGogole:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.alerteaugogole);
+                mMediaPlayer.start();
+                break;
+            case R.id.chaussures:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.chaussures);
+                mMediaPlayer.start();
+                break;
         }
 
     }
@@ -106,6 +116,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnPasltps;
         Button btnCharlie;
         Button btnPlastique;
+        Button btnGogole;
+        Button btnChaussures;
 
         btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
         btnMalou = (Button) findViewById(R.id.Malou);
@@ -116,6 +128,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPasltps = (Button) findViewById(R.id.pasltps);
         btnCharlie = (Button) findViewById(R.id.charlie);
         btnPlastique = (Button) findViewById(R.id.memeDuPlastique);
+        btnGogole = (Button) findViewById(R.id.alerteGogole);
+        btnChaussures = (Button) findViewById(R.id.chaussures);
 
         btnOnSenBatLesCouillesCourt.setOnClickListener(this);
         btnMalou.setOnClickListener(this);
@@ -126,6 +140,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPasltps.setOnClickListener(this);
         btnCharlie.setOnClickListener(this);
         btnPlastique.setOnClickListener(this);
+        btnGogole.setOnClickListener(this);
+        btnChaussures.setOnClickListener(this);
     }
 
 }

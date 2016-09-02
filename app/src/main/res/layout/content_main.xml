@@ -76,6 +76,18 @@
                 android:text="@string/plastique"
                 android:id="@+id/memeDuPlastique" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/alerteGogole"
+                android:id="@+id/alerteGogole" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chaussures"
+                android:id="@+id/chaussures" />
+
         </LinearLayout>
 
 
