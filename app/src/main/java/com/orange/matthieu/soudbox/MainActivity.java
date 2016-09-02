@@ -69,6 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mMediaPlayer = MediaPlayer.create(this, R.raw.makelele);
                 mMediaPlayer.start();
                 break;
+            case R.id.makeleleCourt:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.makelele_court);
+                mMediaPlayer.start();
+                break;
             case R.id.lambert:
                 mMediaPlayer = MediaPlayer.create(this, R.raw.boitalambert);
                 mMediaPlayer.start();
@@ -101,6 +105,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mMediaPlayer = MediaPlayer.create(this, R.raw.chaussures);
                 mMediaPlayer.start();
                 break;
+            /*
+            TODO avec ta grosse bite
+            TODO TIMMY
+             */
         }
 
     }
@@ -110,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnOnSenBatLesCouillesCourt;
         Button btnMalou;
         Button btnMakelele;
+        Button btnMakeleleCourt;
         Button btnlambert;
         Button btnOnSenBatLesCouillesLong;
         Button btnFilmLesPieds;
@@ -122,6 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
         btnMalou = (Button) findViewById(R.id.Malou);
         btnMakelele = (Button) findViewById(R.id.Makelele);
+        btnMakeleleCourt = (Button) findViewById(R.id.makeleleCourt);
         btnlambert = (Button) findViewById(R.id.lambert);
         btnOnSenBatLesCouillesLong = (Button) findViewById(R.id.onSenBatLesCouillesLong);
         btnFilmLesPieds = (Button) findViewById(R.id.filmLesPieds);
@@ -134,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnOnSenBatLesCouillesCourt.setOnClickListener(this);
         btnMalou.setOnClickListener(this);
         btnMakelele.setOnClickListener(this);
+        btnMakeleleCourt.setOnClickListener(this);
         btnlambert.setOnClickListener(this);
         btnOnSenBatLesCouillesLong.setOnClickListener(this);
         btnFilmLesPieds.setOnClickListener(this);
