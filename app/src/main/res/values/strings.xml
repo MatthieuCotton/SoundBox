@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">SoundBox</string>
     <string name="action_settings">Settings</string>
+    <string name="onSenBatLesCouillesCourt">On s\'en bat les couilles court</string>
+    <string name="onSenBatLesCouillesLong">On s\'en bat les couilles long</string>
+    <string name="malou">Mais oui c\'est clair</string>
+    <string name="jeMenBatsLesCouilles">J\'m\'en bats les couilles</string>
+    <string name="lambert">Boîte a lambert</string>
+    <string name="filmLesPieds">Filme les pieds</string>
+    <string name="pasLeTempsDeNiaiser">Pas le temps de niaiser</string>
+    <string name="charlie">Oh Charlie !</string>
 </resources>
