@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mMediaPlayer = MediaPlayer.create(this, R.raw.chaussures);
                 mMediaPlayer.start();
                 break;
-
             case R.id.feller:
                 mMediaPlayer = MediaPlayer.create(this, R.raw.feller);
                 mMediaPlayer.start();
@@ -113,7 +112,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mMediaPlayer = MediaPlayer.create(this, R.raw.ohputain);
                 mMediaPlayer.start();
                 break;
-
+            case R.id.belleSono:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.bellesono);
+                mMediaPlayer.start();
+                break;
+            case R.id.puDeCarette:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.pu_de_carette);
+                mMediaPlayer.start();
+                break;
+            case R.id.grossesBites:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.vos_grosses_bites);
+                mMediaPlayer.start();
+                break;
         }
 
     }
@@ -134,6 +144,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnChaussures;
         Button btnOhPutain;
         Button btnFeller;
+        Button btnGrossesBites;
+        Button btnCarette;
+        Button btnSono;
 
         btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
         btnMalou = (Button) findViewById(R.id.Malou);
@@ -149,6 +162,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnChaussures = (Button) findViewById(R.id.chaussures);
         btnOhPutain = (Button) findViewById(R.id.ohPutain);
         btnFeller = (Button) findViewById(R.id.feller);
+        btnGrossesBites = (Button) findViewById(R.id.grossesBites);
+        btnCarette = (Button) findViewById(R.id.puDeCarette);
+        btnSono = (Button) findViewById(R.id.belleSono);
 
 
         btnOnSenBatLesCouillesCourt.setOnClickListener(this);
@@ -165,6 +181,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnChaussures.setOnClickListener(this);
         btnOhPutain.setOnClickListener(this);
         btnFeller.setOnClickListener(this);
+        btnCarette.setOnClickListener(this);
+        btnSono.setOnClickListener(this);
+        btnGrossesBites.setOnClickListener(this);
     }
 
 }

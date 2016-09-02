@@ -75,6 +75,19 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/puDeCarette"
+                android:id="@+id/puDeCarette"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/belleSono"
+                android:id="@+id/belleSono" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/charlie"
                 android:id="@+id/charlie" />
 
@@ -107,6 +120,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ohPutain"
                 android:id="@+id/ohPutain"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grossesBites"
+                android:id="@+id/grossesBites"
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
 
