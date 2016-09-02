@@ -88,6 +88,18 @@
                 android:text="@string/chaussures"
                 android:id="@+id/chaussures" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feller"
+                android:id="@+id/feller" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ohPutain"
+                android:id="@+id/ohPutain"/>
+
         </LinearLayout>
 
 

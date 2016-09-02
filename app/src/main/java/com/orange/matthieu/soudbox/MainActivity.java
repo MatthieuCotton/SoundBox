@@ -3,7 +3,6 @@ package com.orange.matthieu.soudbox;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -101,6 +100,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mMediaPlayer = MediaPlayer.create(this, R.raw.chaussures);
                 mMediaPlayer.start();
                 break;
+            case R.id.feller:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.feller);
+                mMediaPlayer.start();
+                break;
+            case R.id.ohPutain:
+                mMediaPlayer = MediaPlayer.create(this, R.raw.ohputain);
+                mMediaPlayer.start();
+                break;
         }
 
     }
@@ -118,6 +125,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnPlastique;
         Button btnGogole;
         Button btnChaussures;
+        Button btnOhPutain;
+        Button btnFeller;
 
         btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
         btnMalou = (Button) findViewById(R.id.Malou);
@@ -130,6 +139,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPlastique = (Button) findViewById(R.id.memeDuPlastique);
         btnGogole = (Button) findViewById(R.id.alerteGogole);
         btnChaussures = (Button) findViewById(R.id.chaussures);
+        btnOhPutain = (Button) findViewById(R.id.ohPutain);
+        btnFeller = (Button) findViewById(R.id.feller);
+
 
         btnOnSenBatLesCouillesCourt.setOnClickListener(this);
         btnMalou.setOnClickListener(this);
@@ -142,6 +154,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPlastique.setOnClickListener(this);
         btnGogole.setOnClickListener(this);
         btnChaussures.setOnClickListener(this);
+        btnOhPutain.setOnClickListener(this);
+        btnFeller.setOnClickListener(this);
     }
 
 }
