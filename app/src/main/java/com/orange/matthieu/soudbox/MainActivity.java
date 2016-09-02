@@ -28,11 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onPause() {
         super.onPause();
-        if(mMediaPlayer != null){
-            if(mMediaPlayer.isPlaying()){
-                mMediaPlayer.stop();
-            }
-        }
+        stopMusic();
 
     }
 
@@ -61,82 +57,77 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
+        stopMusic();
+
+        switch (view.getId()) {
+            case R.id.stop:
+                //inutile de mettre un stop, stopMusic() avant switch
+                break;
+            case R.id.onSenBatLesCouillesCourt:
+                startMusic(R.raw.onsenbatcourt);
+                break;
+            case R.id.Malou:
+                startMusic(R.raw.malou);
+                break;
+            case R.id.Makelele:
+                startMusic(R.raw.makelele);
+                break;
+            case R.id.makeleleCourt:
+                startMusic(R.raw.makelele_court);
+                break;
+            case R.id.lambert:
+                startMusic(R.raw.boitalambert);
+                break;
+            case R.id.onSenBatLesCouillesLong:
+                startMusic(R.raw.on_sen_bat_les_couilles);
+                break;
+            case R.id.filmLesPieds:
+                startMusic(R.raw.filmpieds);
+                break;
+            case R.id.pasltps:
+                startMusic(R.raw.pasltpsniaser);
+                break;
+            case R.id.charlie:
+                startMusic(R.raw.ohcharlie);
+                break;
+            case R.id.memeDuPlastique:
+                startMusic(R.raw.memeduplastique);
+                break;
+            case R.id.alerteGogole:
+                startMusic(R.raw.alerteaugogole);
+                break;
+            case R.id.chaussures:
+                startMusic(R.raw.chaussures);
+                break;
+            case R.id.feller:
+                startMusic(R.raw.feller);
+                break;
+            case R.id.ohPutain:
+                startMusic(R.raw.ohputain);
+                break;
+            case R.id.belleSono:
+                startMusic(R.raw.bellesono);
+                break;
+            case R.id.puDeCarette:
+                startMusic(R.raw.pu_de_carette);
+                break;
+            case R.id.grossesBites:
+                startMusic(R.raw.vos_grosses_bites);
+                break;
+        }
+
+    }
+
+    private void startMusic(int music) {
+        mMediaPlayer = MediaPlayer.create(this, music);
+        mMediaPlayer.start();
+    }
+
+    private void stopMusic() {
         if (mMediaPlayer != null) {
             if (mMediaPlayer.isPlaying())
                 mMediaPlayer.stop();
         }
-
-        switch (view.getId()) {
-            case R.id.onSenBatLesCouillesCourt:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.onsenbatcourt);
-                mMediaPlayer.start();
-                break;
-            case R.id.Malou:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.malou);
-                mMediaPlayer.start();
-                break;
-            case R.id.Makelele:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.makelele);
-                mMediaPlayer.start();
-                break;
-            case R.id.makeleleCourt:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.makelele_court);
-                mMediaPlayer.start();
-                break;
-            case R.id.lambert:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.boitalambert);
-                mMediaPlayer.start();
-                break;
-            case R.id.onSenBatLesCouillesLong:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.on_sen_bat_les_couilles);
-                mMediaPlayer.start();
-                break;
-            case R.id.filmLesPieds:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.filmpieds);
-                mMediaPlayer.start();
-                break;
-            case R.id.pasltps:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.pasltpsniaser);
-                mMediaPlayer.start();
-                break;
-            case R.id.charlie:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.ohcharlie);
-                mMediaPlayer.start();
-                break;
-            case R.id.memeDuPlastique:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.memeduplastique);
-                mMediaPlayer.start();
-                break;
-            case R.id.alerteGogole:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.alerteaugogole);
-                mMediaPlayer.start();
-                break;
-            case R.id.chaussures:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.chaussures);
-                mMediaPlayer.start();
-                break;
-            case R.id.feller:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.feller);
-                mMediaPlayer.start();
-                break;
-            case R.id.ohPutain:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.ohputain);
-                mMediaPlayer.start();
-                break;
-            case R.id.belleSono:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.bellesono);
-                mMediaPlayer.start();
-                break;
-            case R.id.puDeCarette:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.pu_de_carette);
-                mMediaPlayer.start();
-                break;
-            case R.id.grossesBites:
-                mMediaPlayer = MediaPlayer.create(this, R.raw.vos_grosses_bites);
-                mMediaPlayer.start();
-                break;
-        }
-
     }
 
     private void initBtn() {
@@ -158,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnGrossesBites;
         Button btnCarette;
         Button btnSono;
+        Button btnStop;
 
         btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
         btnMalou = (Button) findViewById(R.id.Malou);
@@ -176,6 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGrossesBites = (Button) findViewById(R.id.grossesBites);
         btnCarette = (Button) findViewById(R.id.puDeCarette);
         btnSono = (Button) findViewById(R.id.belleSono);
+        btnStop = (Button) findViewById(R.id.stop);
 
 
         btnOnSenBatLesCouillesCourt.setOnClickListener(this);
@@ -195,6 +188,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCarette.setOnClickListener(this);
         btnSono.setOnClickListener(this);
         btnGrossesBites.setOnClickListener(this);
+        btnStop.setOnClickListener(this);
     }
 
 }
