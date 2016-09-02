@@ -13,11 +13,7 @@
     <string name="pasLeTempsDeNiaiser">Pas le temps de niaiser</string>
     <string name="charlie">Oh Charlie !</string>
     <string name="plastique">Même du plastique</string>
-<<<<<<< HEAD
-    <string name="alerteGogole">Alerte au gogole !</string>
-    <string name="chaussures">Je veux des chaussures</string>
     <string name="ohPutain">Oh putain</string>
     <string name="feller">Elle est feller</string>
-=======
->>>>>>> origin/master
+
 </resources>
