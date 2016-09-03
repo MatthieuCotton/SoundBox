@@ -3,18 +3,25 @@ package com.orange.matthieu.soudbox;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public final static String TAG = MainActivity.class.getSimpleName();
 
+    private Handler mHandler = new Handler();
+
     private MediaPlayer mMediaPlayer;
+    private Button btnStop;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onPause() {
         super.onPause();
         stopMusic();
-
     }
 
     @Override
@@ -115,18 +121,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startMusic(R.raw.vos_grosses_bites);
                 break;
         }
-
     }
 
     private void startMusic(int music) {
         mMediaPlayer = MediaPlayer.create(this, music);
         mMediaPlayer.start();
+
+        progressBar.setProgress(0);
+        progressBar.setMax(mMediaPlayer.getDuration() / 100);
+        progressBar.setVisibility(View.VISIBLE);
+
+        MainActivity.this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (mMediaPlayer != null) {
+                    int progress = mMediaPlayer.getCurrentPosition() / 100;
+                    progressBar.setProgress(progress);
+                }
+                mHandler.postDelayed(this, 100); // actualisation 10 fois par seconde
+            }
+        });
+
+        mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                stopMusic();
+            }
+        });
     }
 
     private void stopMusic() {
         if (mMediaPlayer != null) {
-            if (mMediaPlayer.isPlaying())
+            if (mMediaPlayer.isPlaying()) {
                 mMediaPlayer.stop();
+            }
+            progressBar.setVisibility(View.GONE);
         }
     }
 
@@ -149,7 +178,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnGrossesBites;
         Button btnCarette;
         Button btnSono;
-        Button btnStop;
 
         btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
         btnMalou = (Button) findViewById(R.id.Malou);
@@ -170,6 +198,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSono = (Button) findViewById(R.id.belleSono);
         btnStop = (Button) findViewById(R.id.stop);
 
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
 
         btnOnSenBatLesCouillesCourt.setOnClickListener(this);
         btnMalou.setOnClickListener(this);
@@ -189,6 +219,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSono.setOnClickListener(this);
         btnGrossesBites.setOnClickListener(this);
         btnStop.setOnClickListener(this);
+
+        progressBar.setVisibility(View.GONE);
     }
 
 }
