@@ -119,6 +119,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void startMusic(int music) {
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release(); // on libere l'objet avant d'en instancier un nouveau
+        }
+
         mMediaPlayer = MediaPlayer.create(this, music);
         mMediaPlayer.start();
     }
