@@ -22,113 +22,248 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/linearLayout" >
 
-            <Button
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/onSenBatLesCouillesLong"
-                android:text="@string/onSenBatLesCouillesLong" />
+                android:layout_height="match_parent"
+                android:id="@+id/onSenBatLesCouillesLongLayout"
+                android:layout_gravity="bottom">
 
-            <Button
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/onSenBatLesCouillesLong"
+                    android:text="@string/onSenBatLesCouillesLong"
+                    android:stateListAnimator="@null" />
+
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/onSenBatLesCouillesCourt"
-                android:id="@+id/onSenBatLesCouillesCourt" />
+                android:layout_height="match_parent"
+                android:id="@+id/onSenBatLesCouillesCourtFrame"
+                android:layout_gravity="bottom">
 
-            <Button
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onSenBatLesCouillesCourt"
+                    android:id="@+id/onSenBatLesCouillesCourt"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/jeMenBatsLesCouillesLong"
-                android:id="@+id/Makelele" />
+                android:layout_height="match_parent"
+                android:id="@+id/jeMenBatsLesCouillesLongFrame"
+                android:layout_gravity="bottom">
 
-            <Button
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jeMenBatsLesCouillesLong"
+                    android:id="@+id/Makelele"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/jeMenBatsLesCouillesCourt"
-                android:id="@+id/makeleleCourt" />
+                android:layout_height="match_parent"
+                android:id="@+id/jeMenBatsLesCouillesCourtFrame"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jeMenBatsLesCouillesCourt"
+                    android:id="@+id/makeleleCourt"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
 
 
-
-            <Button
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/malou"
-                android:id="@+id/Malou" />
+                android:layout_height="match_parent"
+                android:id="@+id/malouFrame"
+                android:layout_gravity="bottom">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/lambert"
-                android:id="@+id/lambert" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/malou"
+                    android:id="@+id/Malou"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
 
-            <Button
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/filmLesPieds"
-                android:id="@+id/filmLesPieds" />
+                android:layout_height="match_parent"
+                android:id="@+id/lambertFrame"
+                android:layout_gravity="bottom">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/pasLeTempsDeNiaiser"
-                android:id="@+id/pasltps" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lambert"
+                    android:id="@+id/lambert"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
 
-            <Button
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/puDeCarette"
-                android:id="@+id/puDeCarette"
-                android:layout_gravity="center_horizontal" />
+                android:layout_height="match_parent"
+                android:id="@+id/filmLesPiedsFrame"
+                android:layout_gravity="bottom">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/belleSono"
-                android:id="@+id/belleSono" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filmLesPieds"
+                    android:id="@+id/filmLesPieds"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
 
-            <Button
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/charlie"
-                android:id="@+id/charlie" />
+                android:layout_height="match_parent"
+                android:id="@+id/pasltpsFrame"
+                android:layout_gravity="bottom">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/plastique"
-                android:id="@+id/memeDuPlastique" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pasLeTempsDeNiaiser"
+                    android:id="@+id/pasltps"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
 
-            <Button
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/alerteGogole"
-                android:id="@+id/alerteGogole" />
+                android:layout_height="match_parent"
+                android:id="@+id/puDeCaretteFrame"
+                android:layout_gravity="bottom">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/chaussures"
-                android:id="@+id/chaussures" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/puDeCarette"
+                    android:id="@+id/puDeCarette"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
 
-            <Button
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/feller"
-                android:id="@+id/feller" />
+                android:layout_height="match_parent"
+                android:id="@+id/belleSonoFrame"
+                android:layout_gravity="bottom">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ohPutain"
-                android:id="@+id/ohPutain"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/belleSono"
+                    android:id="@+id/belleSono"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
 
-            <Button
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/grossesBites"
-                android:id="@+id/grossesBites"
-                android:layout_gravity="center_horizontal" />
+                android:layout_height="match_parent"
+                android:id="@+id/charlieFrame"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/charlie"
+                    android:id="@+id/charlie"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/memeDuPlastiqueFrame"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plastique"
+                    android:id="@+id/memeDuPlastique"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/alerteGogoleFrame"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alerteGogole"
+                    android:id="@+id/alerteGogole"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/chaussuresFrame"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chaussures"
+                    android:id="@+id/chaussures"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fellerFrame"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feller"
+                    android:id="@+id/feller"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ohPutainFrame"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ohPutain"
+                    android:id="@+id/ohPutain"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/grossesBitesFrame"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/grossesBites"
+                    android:id="@+id/grossesBites"
+                    android:stateListAnimator="@null" />
+            </FrameLayout>
 
         </LinearLayout>
 
@@ -143,11 +278,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <!--
     <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="15dp"
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_centerHorizontal="true" />
+    -->
 
 </RelativeLayout>

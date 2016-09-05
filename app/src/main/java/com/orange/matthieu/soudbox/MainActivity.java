@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -23,6 +24,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnStop;
     private ProgressBar progressBar;
 
+    private LinearLayout linearLayout;
+
+    private Button btnOnSenBatLesCouillesCourt;
+    private Button btnMalou;
+    private Button btnMakelele;
+    private Button btnMakeleleCourt;
+    private Button btnlambert;
+    private Button btnOnSenBatLesCouillesLong;
+    private Button btnFilmLesPieds;
+    private Button btnPasltps;
+    private Button btnCharlie;
+    private Button btnPlastique;
+    private Button btnGogole;
+    private Button btnChaussures;
+    private Button btnOhPutain;
+    private Button btnFeller;
+    private Button btnGrossesBites;
+    private Button btnCarette;
+    private Button btnSono;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initBtn();
+        initProgressBar();
     }
 
     @Override
@@ -70,66 +92,74 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //inutile de mettre un stop, stopMusic() avant switch
                 break;
             case R.id.onSenBatLesCouillesCourt:
-                startMusic(R.raw.onsenbatcourt);
+                startMusic(R.raw.onsenbatcourt, btnOnSenBatLesCouillesCourt);
                 break;
             case R.id.Malou:
-                startMusic(R.raw.malou);
+                startMusic(R.raw.malou, btnMalou);
                 break;
             case R.id.Makelele:
-                startMusic(R.raw.makelele);
+                startMusic(R.raw.makelele, btnMakelele);
                 break;
             case R.id.makeleleCourt:
-                startMusic(R.raw.makelele_court);
+                startMusic(R.raw.makelele_court, btnMakeleleCourt);
                 break;
             case R.id.lambert:
-                startMusic(R.raw.boitalambert);
+                startMusic(R.raw.boitalambert, btnlambert);
                 break;
             case R.id.onSenBatLesCouillesLong:
-                startMusic(R.raw.on_sen_bat_les_couilles);
+                startMusic(R.raw.on_sen_bat_les_couilles, btnOnSenBatLesCouillesLong);
                 break;
             case R.id.filmLesPieds:
-                startMusic(R.raw.filmpieds);
+                startMusic(R.raw.filmpieds, btnFilmLesPieds);
                 break;
             case R.id.pasltps:
-                startMusic(R.raw.pasltpsniaser);
+                startMusic(R.raw.pasltpsniaser, btnPasltps);
                 break;
             case R.id.charlie:
-                startMusic(R.raw.ohcharlie);
+                startMusic(R.raw.ohcharlie, btnCharlie);
                 break;
             case R.id.memeDuPlastique:
-                startMusic(R.raw.meme_du_plastique);
+                startMusic(R.raw.meme_du_plastique, btnPlastique);
                 break;
             case R.id.alerteGogole:
-                startMusic(R.raw.alerteaugogole);
+                startMusic(R.raw.alerteaugogole, btnGogole);
                 break;
             case R.id.chaussures:
-                startMusic(R.raw.chaussures);
+                startMusic(R.raw.chaussures, btnChaussures);
                 break;
             case R.id.feller:
-                startMusic(R.raw.feller);
+                startMusic(R.raw.feller, btnFeller);
                 break;
             case R.id.ohPutain:
-                startMusic(R.raw.ohputain);
+                startMusic(R.raw.ohputain, btnOhPutain);
                 break;
             case R.id.belleSono:
-                startMusic(R.raw.bellesono);
+                startMusic(R.raw.bellesono, btnSono);
                 break;
             case R.id.puDeCarette:
-                startMusic(R.raw.pu_de_carette);
+                startMusic(R.raw.pu_de_carette, btnCarette);
                 break;
             case R.id.grossesBites:
-                startMusic(R.raw.vos_grosses_bites);
+                startMusic(R.raw.vos_grosses_bites, btnGrossesBites);
                 break;
         }
     }
 
-    private void startMusic(int music) {
-        mMediaPlayer = MediaPlayer.create(this, music);
-        mMediaPlayer.start();
+    private void initProgressBar() {
+        linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
+        progressBar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
+    }
 
-        progressBar.setProgress(0);
+    private void startMusic(int music, Button btn) {
+        mMediaPlayer = MediaPlayer.create(this, music);
+
+        final FrameLayout frameLayout = (FrameLayout) btn.getParent();
         progressBar.setMax(mMediaPlayer.getDuration() / 100);
-        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setScaleY(btn.getHeight() / 2);
+        progressBar.setAlpha(0.3F);
+        frameLayout.addView(progressBar);
+
+        mMediaPlayer.start();
 
         MainActivity.this.runOnUiThread(new Runnable() {
             @Override
@@ -146,6 +176,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onCompletion(MediaPlayer mp) {
                 stopMusic();
+                progressBar.setProgress(0);
+            }
+        });
+
+        mMediaPlayer.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+                return false;
             }
         });
     }
@@ -155,29 +193,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (mMediaPlayer.isPlaying()) {
                 mMediaPlayer.stop();
             }
-            progressBar.setVisibility(View.GONE);
+
+            FrameLayout frameLayout = (FrameLayout) progressBar.getParent();
+            if (frameLayout != null) {
+                frameLayout.removeView(progressBar);
+            }
         }
     }
 
     private void initBtn() {
-
-        Button btnOnSenBatLesCouillesCourt;
-        Button btnMalou;
-        Button btnMakelele;
-        Button btnMakeleleCourt;
-        Button btnlambert;
-        Button btnOnSenBatLesCouillesLong;
-        Button btnFilmLesPieds;
-        Button btnPasltps;
-        Button btnCharlie;
-        Button btnPlastique;
-        Button btnGogole;
-        Button btnChaussures;
-        Button btnOhPutain;
-        Button btnFeller;
-        Button btnGrossesBites;
-        Button btnCarette;
-        Button btnSono;
 
         btnOnSenBatLesCouillesCourt = (Button) findViewById(R.id.onSenBatLesCouillesCourt);
         btnMalou = (Button) findViewById(R.id.Malou);
@@ -198,8 +222,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSono = (Button) findViewById(R.id.belleSono);
         btnStop = (Button) findViewById(R.id.stop);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-
 
         btnOnSenBatLesCouillesCourt.setOnClickListener(this);
         btnMalou.setOnClickListener(this);
@@ -219,8 +241,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSono.setOnClickListener(this);
         btnGrossesBites.setOnClickListener(this);
         btnStop.setOnClickListener(this);
-
-        progressBar.setVisibility(View.GONE);
     }
 
 }
